@@ -57,12 +57,36 @@
     </header>
 
     <main class="w-[60%] mx-auto grid grid-cols-4 gap-5">
-      <div class="grid grid-cols-3 col-span-3 gap-3" id="newsContainer"></div>
-      <div class="border border-green-200 rounded-lg overflow-hidden">
-        <h1 class="bg-red-600 text-white p-3 text-center">BookMark</h1>
+      <div class="grid grid-cols-3 col-span-3 gap-3" id="newsContainer">
+        <div class="text-black flex items-center" id="loadContent">
+          Loading...
+        </div>
+      </div>
+      <div class="border border-gray-200 rounded-lg overflow-hidden">
+        <div>
+          <h1
+            class="bg-red-600 text-white p-3 text-center flex justify-between"
+          >
+            BookMark <span id="bookMarkCount">0</span>
+          </h1>
+        </div>
         <div class="p-2" id="bookmark-card"></div>
       </div>
     </main>
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="news-datails-modal" class="modal">
+      <div class="modal-box">
+        <div id="modal-container"></div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <script src="script.js"></script>
   </body>
